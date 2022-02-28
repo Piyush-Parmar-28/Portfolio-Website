@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Home</title>
+
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Satisfy" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Fontawesome Icons -->
+    <script src="https://kit.fontawesome.com/703cfd77f3.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
+    <!-- Bootstrap CSS -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous">
+
+     <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+    
+
+  </head>
+
+  <body>
+
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+
+        <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse"
+              id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page"
+                      href="/">Home</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link " href="/Projects">Projects</a>
+                </li>
+
+              </ul>
+
+
+              <!-- Login & SignUp Buttons -->
+              <!-- <button class="btn btn-outline-primary mx-2"
+                  data-bs-toggle="modal"
+                  data-bs-target="#loginModal">Login</button>
+              <button class="btn btn-outline-primary mx-2"
+                  data-bs-toggle="modal"
+                  data-bs-target="#signupModal">SignUp</button> -->
+
+          </div>
+      </div>
+  </nav>
+
+
+  <!-- Login Modal -->
+
+  <!-- Button trigger modal -->
+  <!-- data-bs-toggle="modal" data-bs-target="#exampleModal" --> <!-- This is the trigger code to trigger the modal -->
+  <!-- Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1"
+      aria-labelledby="loginModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                  <button type="button" class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <form>
+
+                      <div class="mb-3">
+                          <label for="exampleInputEmail1"
+                              class="form-label">Email address</label>
+                          <input type="email" class="form-control"
+                              id="exampleInputEmail1"
+                              aria-describedby="emailHelp">
+                          <div id="emailHelp" class="form-text">We'll
+                              never share your
+                              email with anyone else.</div>
+                      </div>
+
+                      <div class="mb-3">
+                          <label for="exampleInputPassword1"
+                              class="form-label">Password</label>
+                          <input type="password" class="form-control"
+                              id="exampleInputPassword1">
+                      </div>
+
+                      <div class="mb-3 form-check">
+                          <input type="checkbox" class="form-check-input"
+                              id="exampleCheck1">
+                          <label class="form-check-label"
+                              for="exampleCheck1">Check me out</label>
+                      </div>
+
+                      <button type="submit" class="btn btn-primary">Login</button>
+                  </form>
+
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary"
+                      data-bs-dismiss="modal">Close</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+  <!-- SignUp Modal -->
+
+  <!-- Button trigger modal -->
+  <!-- data-bs-toggle="modal" data-bs-target="#exampleModal" --> <!-- This is the trigger code to trigger the modal -->
+  <!-- Modal -->
+  <div class="modal fade" id="signupModal" tabindex="-1"
+      aria-labelledby="signupModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">SignUp</h5>
+                  <button type="button" class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+
+                  <form>
+
+
+                      <div class="mb-3">
+                          <label for="exampleInputEmail1"
+                              class="form-label">Email address</label>
+                          <input type="email" class="form-control"
+                              id="bexampleInputEmail1"
+                              aria-describedby="emailHelp">
+                          <div id="bemailHelp" class="form-text">We'll
+                              never share your
+                              email with anyone else.</div>
+                      </div>
+
+                      <div class="mb-3">
+                          <label for="exampleInputPassword1"
+                              class="form-label">Password</label>
+                          <input type="password" class="form-control"
+                              id="exampleInputPassword2">
+                      </div>
+
+                      <div class="mb-3">
+                          <label for="cexampleInputPassword1"
+                              class="form-label">Confirm Password</label>
+                          <input type="password" class="form-control"
+                              id="cexampleInputPassword2">
+                      </div>
+
+                      <button type="submit" class="btn btn-primary">Create
+                          Account</button>
+                  </form>
+
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary"
+                      data-bs-dismiss="modal">Close</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero">
+      <div class="hero-container">
+        <h1>Piyush Parmar</h1>
+        <h2>I'm a Coder & a Web Designer</h2>
+        <a href="#about" class="btn-scroll scrollto" title="Scroll Down"><i
+            class="bx bx-chevron-down"></i></a>
+      </div>
+    </section><!-- End Hero -->
+
+    <main id="main">
+
+      <!-- ======= About Me Section ======= -->
+      <section id="about" class="about">
+        <div class="container">
+
+          <div class="section-title">
+            <span>About Me</span>
+            <h2>About Me</h2>
+            <p>Student at IIIT Kota, persuing B.Tech in ECE Branch</p>
+          </div>
+
+          <div class="row">
+            <div class="image col-lg-4 d-flex align-items-stretch
+              justify-content-center justify-content-lg-start"></div>
+
+            <div class="col-lg-8 d-flex flex-column align-items-stretch">
+
+              <div class="content ps-lg-4 d-flex flex-column
+                justify-content-center">
+                <div class="row mt-md-4 mt-2">
+
+                  <div class="col-6">
+                    <ul>
+                      <li><i class="bi bi-chevron-right"></i> <strong>Name:</strong>
+                        <span>Piyush Parmar</span></li>
+                      <li><i class="bi bi-chevron-right"></i> <strong>Branch: </strong> <span>ECE</span></li>
+                      <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong>
+                        <span>7014628881</span></li>
+                      <li><i class="bi bi-chevron-right"></i> <strong>City:</strong>
+                        <span>Sheoganj, Rajasthan</span></li>
+                    </ul>
+                  </div>
+
+                  <div class="col-6">
+                    <ul>
+                      <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong>
+                        <span>19</span></li>
+                      <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong>
+                        <span>B. Tech</span></li>
+                      <li><i class="bi bi-chevron-right"></i> <strong>E-Mail:</strong>
+                        <span>2822piyushparmar@gmail.com</span></li>
+                      <li><i class="bi bi-chevron-right"></i> <strong>Web Designer:</strong>
+                        <span>Available</span></li>
+                    </ul>
+                  </div>
+
+                </div>
+
+                <div class="row mt-n4">
+                  <div class="col-md-6 mt-5 d-md-flex align-items-md-stretch">
+                    <div class="count-box">
+                      <i class="bi bi-emoji-smile" style="color: #20b38e;"></i>
+                      <span data-purecounter-start="0"
+                        data-purecounter-end="2" data-purecounter-duration="1"
+                        class="purecounter"></span>
+                      <p><strong>Happy Clients</strong> I have worked for.</p>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 mt-5 d-md-flex align-items-md-stretch">
+                    <div class="count-box">
+                      <i class="bi bi-journal-richtext" style="color: #8a1ac2;"></i>
+                      <span data-purecounter-start="0"
+                        data-purecounter-end="11" data-purecounter-duration="1"
+                        class="purecounter"></span>
+                      <p><strong>Projects</strong> created so far.</p>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 mt-5 d-md-flex align-items-md-stretch">
+                    <div class="count-box">
+                      <i class="bi bi-clock" style="color: #2cbdee;"></i>
+                      <span data-purecounter-start="0" data-purecounter-end="2"
+                        data-purecounter-duration="1" class="purecounter"></span>
+                      <p><strong>Years of experience</strong>  in Web Development</p>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 mt-5 d-md-flex align-items-md-stretch">
+                    <div class="count-box">
+                      <i class="bi bi-award" style="color: #ffb459;"></i>
+                      <span data-purecounter-start="0" data-purecounter-end="6"
+                        data-purecounter-duration="1" class="purecounter"></span>
+                      <p><strong>Awards & Certificates</strong> received in various fields of intrests.</p>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- End .content-->
+
+            </div>
+          </div>
+
+        </div>
+      </section><!-- End About Me Section -->
+
+
+      <!-- ======= My Resume Section ======= -->
+      <section id="resume" class="resume">
+        <div class="container">
+
+          <div class="section-title">
+            <span>My Resume</span>
+            <h2>My Resume</h2>
+            <p>Find my resume below</p>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6">
+              <h3 class="resume-title">Sumary</h3>
+              <div class="resume-item pb-0">
+                <h4>Piyush Parmar</h4>
+                <p><em>I am an enthusiast learner & hardworking individual, persuing my B.Tech form IIIT Kota.
+                  <br>I am a passionate guy, who constantly tries to explore new stuff & stand out from the rest.
+                  
+                  </em></p>
+                
+              </div>
+
+              <h3 class="resume-title">Education</h3>
+              <div class="resume-item">
+                <h4>B.TECH</h4>
+                <h5>2020 - 2024</h5>
+                <p><em>Indian Institute of Information Technology, Kota</em></p>
+                <p>I am persuing my B.Tech form IIIT KOTA in Electronics & Communication Engineering Branch.</p>
+              </div>
+              <div class="resume-item">
+                <h4>Schooling</h4>
+
+                <h5>2004 - 2017</h5>
+                <p><em>S.T Paul's School</em></p>
+                <p>I have studied in S.T Paul's School cleared my 10th std form here.</p>
+
+                <h5>2017 - 2019</h5>
+                <p><em>Shiv Jyoti Sr. Sec. School</em></p>
+                <p>I have studied in Shiv Jyoti Sr. Sec. School cleared my 12th std form here.</p>
+
+              </div>
+
+              
+            </div>
+            <div class="col-lg-6">
+              <h3 class="resume-title">Skills & Hobbies</h3>
+              <div class="resume-item">
+                <h4>Skills</h4>
+                <p><em>Some of my skills are: </em></p>
+                <p>
+                  <ul>
+                    <li>Java (Object-Oriented)</li>
+                    <li>Data Structures</li>
+                    <li>Problem Solving</li>
+                    <li>Python</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JS</li>
+                    <li>Node JS</li>
+                    <li>Express</li>
+                    <li>MongoDB</li>
+                  </ul>
+                </p>
+              </div>
+              <div class="resume-item">
+                <h4>Hobbies</h4>
+                <p><em>Some of my hobbies are:</em></p>
+                <p>
+                  <ul>
+                    <li>Playing Badminton</li>
+                    <li>Swimming</li>
+                    <li>Singing</li>
+                    <li>Painting</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section><!-- End My Resume Section -->
+
+
+      <!-- ======= Contact Me Section ======= -->
+      <section id="contact" class="contact">
+        <div class="container">
+
+          <div class="section-title">
+            <span>Contact Me</span>
+            <h2>Contact Me</h2>
+            <p>Contact me via any of the options below</p>
+          </div>
+
+          <div class="row">
+
+            <div class="col-lg-6">
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="info-box">
+                    <i class="bx bx-share-alt"></i>
+                    <h3>Social Profiles</h3>
+                    <div class="social-links">
+                      <!-- <a href="#"><i class="bi bi-twitter"></i></a>
+                      <a href="#"><i class="bi bi-facebook"></i></a> -->
+                      <a href="https://www.instagram.com/2822piyushparmar/" target="_blank"><i class="bi bi-instagram p"></i></a>
+                      <a href="https://github.com/Piyush-Parmar-28?tab=repositories" target="_blank"><i class="bi bi-github 2"></i></a>
+                      <a href="https://www.linkedin.com/in/piyush-parmar-76b97820b/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                      <!-- <a href="https://www.linkedin.com/in/piyush-parmar-76b97820b/" target="_blank"><i class="bi bi-twitter"></i></a> -->
+                      <a href="https://wa.me/917014628881" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="info-box mt-4">
+                    <i class="bx bx-envelope"></i>
+                    <h3>Email Me</h3>
+                    <p>2822piyushparmar@gamil.com</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="info-box mt-4">
+                    <i class="bx bx-phone-call"></i>
+                    <h3>Call Me</h3>
+                    <p>7014628881</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-lg-6">
+
+              <!-- <form action="javascript:sendmail()" method="post" role="form"
+                class="php-email-form"> -->
+
+                <!-- Replacing my email with bee....e1d -->
+                <form action="https://formsubmit.co/bee421ebc47defba5886e3a3702c3e1d " method="POST" role="form"
+                class="php-email-form">
+                
+                <input type="hidden" name="_next" value="http://localhost:7000/Success">
+
+                <!-- Disabling the captcha in during form submit -->
+                <input type="hidden" name="_captcha" value="false">
+
+                <div class="row">
+
+                  <div class="col-md-6 form-group">
+                    <input type="text" class="form-control"
+                      id="name" placeholder="Your Name" required>
+                  </div>
+
+                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <input type="email" class="form-control" name="email"
+                      id="email" placeholder="Your Email" required>
+                  </div>
+
+                </div>
+
+                <div class="form-group mt-3">
+                  <input type="text" class="form-control" name="subject"
+                    id="subject" placeholder="Subject" required>
+                </div>
+
+                <div class="form-group mt-3">
+                  <textarea class="form-control" name="message" id="message" rows="6"
+                    placeholder="Message" required></textarea>
+                </div>
+
+                
+
+                <div  class="my-3 text-center">
+                  <button  type="submit">Send Message</button>
+                </div>
+
+              </form>
+            </div>
+
+          </div>
+
+        </div>
+      </section><!-- End Contact Me Section -->
+
+    </main><!-- End #main -->
+
+    <!-- Footer -->
+    <footer class="pb-3 pt-4 bg-secondary">
+
+      <p class="text-center text-white border-bottom mx-5 pb-3" style="font-size: larger; font-family: 'Times New Roman', Times, serif;">This Website is a copyright property <i class="far fa-copyright"></i> of Piyush Parmar.</p>
+
+      <p class="text-center text-white mb-0" style="font-size: larger; font-family: 'Times New Roman', Times, serif;">All Rights Reserved.</p>
+    </footer>
+
+    
+
+    <!-- Vendor JS Files -->
+    <script src="vendor/purecounter/purecounter.js"></script>
+
+
+    <!-- Using SMTP so as to send mail from form -->
+
+    <!-- JQuery CDN Link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Including SMTP CDN -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <!-- <script>
+
+      function sendMail() {
+        /* All the parameters have been taken from id tag of the form */
+        var Name= $("#name").val();
+        var Email= $("#email").val();
+        var Subject= $("#subject").val();
+        var Message= $("#message").val();
+
+        var body= 'Name: '+ Name+ '<br>E-Mail: '+ Email+ '<br>Subject: '+ Subject+ '<br>Message: '+ Message;
+
+        Email.send({
+          Host : "smtp.gmail.com",
+          Username : "2822piyushparmar@gmail.com",
+          Password : "santosh138",
+          To : '2822piyushparmar@gmail.com',
+          From : Email,
+          Subject : "New message on form by ",
+          Body : body
+        }).then(
+          message => alert(message)
+        );
+
+      }
+
+      
+
+    </script> -->
+
+    <script>  
+
+      function sendmail(){
+     
+       var name = $('#name').val();
+       var email = $('#email').val();
+       var subject = $('#subject').val();
+       var message = $('#message').val();
+
+ 
+       var body='Name: '+name+'<br>Email: '+email+'<br>Subject: '+subject+'<br>Message: '+message;
+
+       console.log(body)
+      
+       
+
+       //console.log(name, phone, email, message);
+       Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "2822piyushparmar@gmail.com",
+        Password : "9D24BDC8766BD3CCBFDAA9FEA31D0E16C539",
+        To : 'piyushparmarmovies@gmail.com',
+        From : email,
+        Subject : "New message by: ",
+        Body : body
+       }).then(
+         message =>{
+           //console.log (message);
+           if(message=='OK'){
+           alert('Your mail has been send. Thank you for connecting.');
+           }
+           else{
+             console.error (message);
+             alert('There is error at sending message. ')
+             
+           }
+ 
+         }
+       );
+ 
+     }
+ 
+ 
+     </script>
+
+  </body>
+
+</html>

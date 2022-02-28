@@ -1,0 +1,971 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <script src="https://kit.fontawesome.com/703cfd77f3.js"
+            crossorigin="anonymous"></script>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous">
+
+        <!-- Linking JS File for Project Serach -->
+        <script src="JS Files\projectSearch.js"></script>    
+
+        <title>Projects</title>
+    </head>
+    <body style="background-color: #f8f9fa;">
+
+        <!-- Nav Bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse"
+                    id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page"
+                                href="/">Home</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Projects</a>
+                        </li>
+
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" id="myInput" aria-label="Search" onkeyup="search()">
+                        <button class="btn btn-outline-success mx-2" type="submit">Search</button>
+                    </form>
+
+                    <!-- Login & SignUp Buttons -->
+                    <!-- <button class="btn btn-outline-primary mx-2"
+                        data-bs-toggle="modal"
+                        data-bs-target="#loginModal">Login</button>
+                    <button class="btn btn-outline-primary mx-2"
+                        data-bs-toggle="modal"
+                        data-bs-target="#signupModal">SignUp</button> -->
+
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- Login Modal -->
+
+        <!-- Button trigger modal -->
+        <!-- data-bs-toggle="modal" data-bs-target="#exampleModal" --> <!-- This is the trigger code to trigger the modal -->
+        <!-- Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1"
+            aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                        <button type="button" class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1"
+                                    class="form-label">Email address</label>
+                                <input type="email" class="form-control"
+                                    id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+                                <div id="emailHelp" class="form-text">We'll
+                                    never share your
+                                    email with anyone else.</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1"
+                                    class="form-label">Password</label>
+                                <input type="password" class="form-control"
+                                    id="exampleInputPassword1">
+                            </div>
+
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input"
+                                    id="exampleCheck1">
+                                <label class="form-check-label"
+                                    for="exampleCheck1">Check me out</label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary"
+                            data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- SignUp Modal -->
+
+        <!-- Button trigger modal -->
+        <!-- data-bs-toggle="modal" data-bs-target="#exampleModal" --> <!-- This is the trigger code to trigger the modal -->
+        <!-- Modal -->
+        <div class="modal fade" id="signupModal" tabindex="-1"
+            aria-labelledby="signupModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">SignUp</h5>
+                        <button type="button" class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        <form>
+
+
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1"
+                                    class="form-label">Email address</label>
+                                <input type="email" class="form-control"
+                                    id="bexampleInputEmail2"
+                                    aria-describedby="emailHelp">
+                                <div id="bemailHelp" class="form-text">We'll
+                                    never share your
+                                    email with anyone else.</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1"
+                                    class="form-label">Password</label>
+
+                                <input type="password" class="form-control"
+                                    id="cexampleInputPassword2">
+
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="cexampleInputPassword1"
+                                    class="form-label">Confirm
+                                    Password</label>
+                                <input type="password" class="form-control"
+                                    id="cexampleInputPassword1">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Create
+                                Account</button>
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary"
+                            data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Header -->
+        <header class="page-header-ui page-header-ui-light"style="background-color:
+            rgb(209, 255, 82);">
+            <div class="page-header-ui-content pt-5">
+                <div class="container px-5">
+                    <div class="row gx-5 align-items-center">
+                        <div class="col-lg-6 aos-init aos-animate"
+                            data-aos="fade-up">
+                            <h1 class="page-header-ui-title">Explore all the
+                                Projects</h1>
+                            <p class="page-header-ui-text mb-3">Welcome to my Portfolio's Projects page.<br> Here you will find all
+                                my projects I have created so far.</p>
+                        </div>
+
+                        <div class="col-lg-6 d-none d-lg-block aos-init
+                            aos-animate my-3" data-aos="fade-up"
+                            data-aos-delay="100"><img class="img-fluid"
+                                src="images\undrawSVG.svg"
+                                alt="..."></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="svg-border-rounded text-light">
+
+                <!-- Rounded SVG Border-->
+                <svg xmlns="D:\My Data Structure
+                    Website\AZCoder_Website\undraw_Blogging_re_kl0d.svg"
+                    viewBox="0 0 144.54 17.34" preserveAspectRatio="none"
+                    fill="currentColor"><path
+                        d="M144.54,18.34H0V0H144.54ZM0,0S32.36,17.34,72.27,17.34,144.54,0,144.54,0"></path>
+                </svg>
+            </div>
+
+        </header>
+
+
+        <!-- Cards -->
+        <div class="album py-5 bg-light">
+            <div class="container">
+
+                <div class="row g-3">
+
+                    <div class="col-lg-3 col-6 card-display-no">
+
+                        <div class="card shadow-sm text-center">
+
+                            <h6 class="card-header">A-Z Coder Website</h6>
+                            <img class="img-fluid" src="images\coder.png" alt="..." style="padding: 5%;">
+
+                            <div class="card-body">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#coder">Check Out</button>
+                            </div>
+
+                        </div>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="coder" tabindex="-1"
+                            aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"
+                                            id="exampleModalLabel">A-Z Coder Website</h5>
+                                        <button type="button" class="btn-close"
+                                            data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <img class="img-fluid" src="images\coder.png" alt="..." style="padding: 5%;">
+                                    </div>
+
+                                    <div class="modal-footer justify-content-between">
+
+                                        <a href="#" target="_blank">
+                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Website</button>
+                                        </a>
+                                        
+                                        
+                                        <a href="#" target="_blank">
+                                            <button type="button" class="btn btn-success">GitHub Link</button>
+                                        </a>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-3 col-6 card-display-no">
+
+                        <div class="card shadow-sm text-center">
+                            <h6 class="card-header">Door Lock - Arduino</h6>
+                            <img class="img-fluid" src="images\arduino.png"
+                                alt="..." style="padding: 5%;">
+
+                            <div class="card-body">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#arduino">Check
+                                    Out</button>
+                            </div>
+                        </div>
+
+                        
+                        <div class="modal fade" id="arduino" tabindex="-1"
+                            aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"
+                                            id="exampleModalLabel">Door Lock - Arduino</h5>
+                                        <button type="button" class="btn-close"
+                                            data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <img class="img-fluid" src="images\arduino.png" alt="..." style="padding: 5%;">
+                                    </div>
+
+                                    <div class="modal-footer justify-content-between">
+
+                                        <a href="https://youtu.be/FagAWdl6LNE" target="_blank">
+                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Youtube Link</button>
+                                        </a>
+                                        
+                                        
+                                        <a href="https://github.com/Piyush-Parmar-28/Door-Lock-Project-Arduino" target="_blank">
+                                            <button type="button" class="btn btn-success">GitHub Link</button>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-3 col-6 card-display-no">
+
+                        <div class="card shadow-sm text-center">
+                            <h6 class="card-header">Iron MAN - Jarvis </h6>
+                            <img class="img-fluid" src="images\ironMan.png"
+                                alt="..." style="padding: 5%;">
+
+                            <div class="card-body">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#iron-man">Check
+                                    Out</button>
+                            </div>
+                        </div>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="iron-man" tabindex="-1"
+                            aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"
+                                            id="exampleModalLabel">Iron MAN - Jarvis</h5>
+                                        <button type="button" class="btn-close"
+                                            data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <img class="img-fluid" src="images\ironMan.png" alt="..." style="padding: 5%;">
+                                    </div>
+
+                                    <div class="modal-footer justify-content-between">
+
+                                        <a href="https://youtu.be/3rmKPgaxvv0" target="_blank">
+                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Youtube Link</button>
+                                        </a>
+                                        
+                                        
+                                        <a href="https://github.com/Piyush-Parmar-28/Jarvis" target="_blank">
+                                            <button type="button" class="btn btn-success">GitHub Link</button>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-3 col-6 card-display-no">
+
+                        <div class="card shadow-sm text-center">
+                            <h6 class="card-header">Snake Game- Python </h6>
+                            <img class="img-fluid" src="images\snake.png"
+                                alt="..." style="padding: 5%;">
+
+                            <div class="card-body">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#snake">Check
+                                    Out</button>
+                            </div>
+                        </div>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="snake" tabindex="-1"
+                            aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"
+                                            id="exampleModalLabel">Snake Game- Python</h5>
+                                        <button type="button" class="btn-close"
+                                            data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <img class="img-fluid" src="images\snake.png" alt="..." style="padding: 5%;">
+                                    </div>
+
+                                    <div class="modal-footer justify-content-center">
+
+                                        <a href="https://github.com/Piyush-Parmar-28/SnakeGame" target="_blank">
+                                            <button type="button" class="btn btn-success">GitHub Link</button>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-3 col-6 card-display-no">
+
+                        <div class="card shadow-sm text-center">
+                            <h6 class="card-header">Socket Programming - Python</h6>
+                            <img class="img-fluid" src="images\socket.png"
+                                alt="..." style="padding: 5%;">
+
+                            <div class="card-body">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#socket">Check
+                                    Out</button>
+                            </div>
+                        </div>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="socket" tabindex="-1"
+                            aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"
+                                            id="exampleModalLabel">Socket Programming - Python</h5>
+                                        <button type="button" class="btn-close"
+                                            data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <img class="img-fluid" src="images\socket.png" alt="..." style="padding: 5%;">
+                                    </div>
+
+                                    <div class="modal-footer justify-content-between">
+
+                                        <a href="https://youtu.be/F580k3PZaRk" target="_blank">
+                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Youtube Link</button>
+                                        </a>
+                                        
+                                        
+                                        <a href="https://github.com/Piyush-Parmar-28/SocketProgramming" target="_blank">
+                                            <button type="button" class="btn btn-success">GitHub Link</button>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-3 col-6 card-display-no">
+
+                        <div class="card shadow-sm text-center">
+                            <h6 class="card-header">Line at Max. Distance -
+                                Python </h6>
+                            <img class="img-fluid" src="images\line.png"
+                                alt="..." style="padding: 5%;">
+
+                            <div class="card-body">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#distance">Check
+                                    Out</button>
+                            </div>
+                        </div>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="distance" tabindex="-1"
+                            aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"
+                                            id="exampleModalLabel">Line at Max. Distance -
+                                            Python</h5>
+                                        <button type="button" class="btn-close"
+                                            data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <img class="img-fluid" src="images\line.png" alt="..." style="padding: 5%;">
+                                    </div>
+
+                                    <div class="modal-footer justify-content-between">
+
+                                        <a href="https://youtu.be/HaYOrI-uS0Y" target="_blank">
+                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Youtube Link</button>
+                                        </a>
+                                        
+                                        
+                                        <a href="https://github.com/Piyush-Parmar-28/Line-at-Max-Distance" target="_blank">
+                                            <button type="button" class="btn btn-success">GitHub Link</button>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-3 col-6 card-display-no">
+
+                        <div class="card shadow-sm text-center">
+                            <h6 class="card-header">CGPA Calculator </h6>
+                            <img class="img-fluid" src="images\calculator.png"
+                                alt="..." style="padding: 5%;">
+
+                            <div class="card-body">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#calculator">Check
+                                    Out</button>
+                            </div>
+                        </div>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="calculator" tabindex="-1"
+                            aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"
+                                            id="exampleModalLabel">CGPA Calculator</h5>
+                                        <button type="button" class="btn-close"
+                                            data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <img class="img-fluid" src="images\calculator.png" alt="..." style="padding: 5%;">
+                                    </div>
+
+                                    <div class="modal-footer justify-content-between">
+
+                                        <a href="https://piyush-parmar-28.github.io/CGPA-Calculator/" target="_blank">
+                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Website</button>
+                                        </a>
+                                        
+                                        
+                                        <a href="https://github.com/Piyush-Parmar-28/CGPA-Calculator" target="_blank">
+                                            <button type="button" class="btn btn-success">GitHub Link</button>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-3 col-6 card-display-no">
+
+                        <div class="card shadow-sm text-center">
+                            <h6 class="card-header">Google Clone</h6>
+                            <img class="img-fluid" src="images\chrome.png"
+                                alt="..." style="padding: 5%;">
+
+                            <div class="card-body">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#google">Check
+                                    Out</button>
+                            </div>
+                        </div>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="google" tabindex="-1"
+                            aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"
+                                            id="exampleModalLabel">Google Clone</h5>
+                                        <button type="button" class="btn-close"
+                                            data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <img class="img-fluid" src="images\chrome.png" alt="..." style="padding: 5%;">
+                                    </div>
+
+                                    <div class="modal-footer justify-content-between">
+
+                                        <a href="https://piyush-parmar-28.github.io/Google-Clone/" target="_blank">
+                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Website</button>
+                                        </a>
+                                        
+                                        
+                                        <a href="https://github.com/Piyush-Parmar-28/Google-Clone" target="_blank">
+                                            <button type="button" class="btn btn-success">GitHub Link</button>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-3 col-6 card-display-no">
+
+                        <div class="card shadow-sm text-center">
+                            <h6 class="card-header">Responsive Web Pages</h6>
+                            <img class="img-fluid" src="images\webPage.png"
+                                alt="..." style="padding: 5%;">
+
+                            <div class="card-body">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#page">Check
+                                    Out</button>
+                            </div>
+                        </div>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="page" tabindex="-1"
+                            aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"
+                                            id="exampleModalLabel">Responsive Web Pages</h5>
+                                        <button type="button" class="btn-close"
+                                            data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <img class="img-fluid" src="images\webPage.png" alt="..." style="padding: 5%;">
+                                    </div>
+
+
+                                    <div class="modal-footer justify-content-between">
+
+                                        <a href="https://piyush-parmar-28.github.io/Shopping-Page/#" target="_blank">
+                                            <button type="button" class="btn btn-danger"
+                                            data-bs-dismiss="modal">Shopping Page</button>
+                                        </a>
+
+                                        <a href="https://github.com/Piyush-Parmar-28/Shopping-Page" target="_blank">
+                                            <button type="button" class="btn btn-success">GitHub Link</button>
+                                        </a>
+
+                                    </div>
+
+                                    <div class="modal-footer justify-content-between">
+                                        
+                                        <a href="https://piyush-parmar-28.github.io/Scooty-Landing-Page/" target="_blank">
+                                            <button type="button" class="btn btn-danger"
+                                            data-bs-dismiss="modal">Scooty Page</button>
+                                        </a>
+
+                                        <a href="https://github.com/Piyush-Parmar-28/Scooty-Landing-Page" target="_blank">
+                                            <button type="button" class="btn btn-success">GitHub Link</button>
+                                        </a>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-3 col-6 card-display-no">
+
+                        <div class="card shadow-sm text-center">
+                            <h6 class="card-header">Weather Website</h6>
+                            <img class="img-fluid" src="images\weather.png"
+                                alt="..." style="padding: 5%;">
+
+                            <div class="card-body">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#weather">Check
+                                    Out</button>
+                            </div>
+                        </div>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="weather" tabindex="-1"
+                            aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"
+                                            id="exampleModalLabel">Weather Website</h5>
+                                        <button type="button" class="btn-close"
+                                            data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <img class="img-fluid" src="images\weather.png" alt="..." style="padding: 5%;">
+                                    </div>
+
+                                    <div class="modal-footer justify-content-between">
+
+                                        <a href="https://weather-piyush.herokuapp.com/" target="_blank">
+                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Website</button>
+                                        </a>
+                                        
+                                        
+                                        <a href="https://github.com/Piyush-Parmar-28/Weather-Website" target="_blank">
+                                            <button type="button" class="btn btn-success">GitHub Link</button>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-3 col-6 card-display-no">
+
+                        <div class="card shadow-sm text-center">
+                            <h6 class="card-header">Movie Website</h6>
+                            <img class="img-fluid" src="images\movie.png"
+                                alt="..." style="padding: 5%;">
+
+                            <div class="card-body">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#movie">Check
+                                    Out</button>
+                            </div>
+                        </div>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="movie" tabindex="-1"
+                            aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"
+                                            id="exampleModalLabel">Movie Website</h5>
+                                        <button type="button" class="btn-close"
+                                            data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <img class="img-fluid" src="images\movie.png" alt="..." style="padding: 5%;">
+                                    </div>
+
+                                    <div class="modal-footer justify-content-between">
+
+                                        <a href="https://movie-browse-review-website.herokuapp.com/" target="_blank">
+                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Website</button>
+                                        </a>
+                                        
+                                        
+                                        <a href="https://github.com/Piyush-Parmar-28/Movie-Website" target="_blank">
+                                            <button type="button" class="btn btn-success">GitHub Link</button>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- <div class="col-lg-3 col-6 card-display-no">
+
+                        <div class="card shadow-sm text-center">
+                            <h6 class="card-header">Juke Box</h6>
+                            <img class="img-fluid" src="images\music.png"
+                                alt="..." style="padding: 5%;">
+
+                            <div class="card-body">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#juke">Check
+                                    Out</button>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="juke" tabindex="-1"
+                            aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"
+                                            id="exampleModalLabel">Juke Box</h5>
+                                        <button type="button" class="btn-close"
+                                            data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <img class="img-fluid" src="images\music.png" alt="..." style="padding: 5%;">
+                                    </div>
+
+                                    <div class="modal-footer justify-content-center">
+
+                                        <button type="button" class="btn btn-danger"
+                                        data-bs-dismiss="modal">Live Website</button>
+    
+                                        <button type="button" class="btn btn-success">GitHub Link</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> -->
+
+                    <!-- <div class="col-lg-3 col-6 card-display-no">
+
+                        <div class="card shadow-sm text-center">
+                            <h6 class="card-header">Music Player</h6>
+                            <img class="img-fluid" src="images\musicPlayer.png"
+                                alt="..." style="padding: 5%;">
+
+                            <div class="card-body">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#player">Check
+                                    Out</button>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="player" tabindex="-1"
+                            aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"
+                                            id="exampleModalLabel">Music Player</h5>
+                                        <button type="button" class="btn-close"
+                                            data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <img class="img-fluid" src="images\musicPlayer.png" alt="..." style="padding: 5%;">
+                                    </div>
+
+                                    <div class="modal-footer justify-content-center">
+
+                                        <button type="button" class="btn btn-danger"
+                                        data-bs-dismiss="modal">Live Website</button>
+    
+                                        <button type="button" class="btn btn-success">GitHub Link</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> -->
+
+                    <!-- <div class="col-lg-3 col-6 card-display-no">
+
+                        <div class="card shadow-sm text-center">
+                            <h6 class="card-header">Blood bank Website</h6>
+                            <img class="img-fluid"
+                                src="images\bloodDonation.png" alt="..."
+                                style="padding: 5%;">
+
+                            <div class="card-body">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#bank">Check
+                                    Out</button>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="bank" tabindex="-1"
+                            aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"
+                                            id="exampleModalLabel">Blood bank Website</h5>
+                                        <button type="button" class="btn-close"
+                                            data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <img class="img-fluid" src="images\bloodDonation.png" alt="..." style="padding: 5%;">
+                                    </div>
+
+                                    <div class="modal-footer justify-content-center">
+
+                                        <button type="button" class="btn btn-danger"
+                                        data-bs-dismiss="modal">Live Website</button>
+    
+                                        <button type="button" class="btn btn-success">GitHub Link</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> -->
+                    
+                    
+
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="pb-3 pt-4 bg-secondary">
+
+            <p class="text-center text-white border-bottom mx-5 pb-3" style="font-size: larger; font-family: 'Times New Roman', Times, serif;">This Website is a copyright property <i class="far fa-copyright"></i> of Piyush Parmar.</p>
+    
+            <p class="text-center text-white mb-0" style="font-size: larger; font-family: 'Times New Roman', Times, serif;">All Rights Reserved.</p>
+  
+        </footer>
+
+
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+    </body>
+</html>
+
+<style>
+  .imgage{
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+</style>
